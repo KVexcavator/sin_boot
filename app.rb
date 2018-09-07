@@ -18,3 +18,6 @@ get '/contacts' do
 	erb :contacts			
 end
 
+post '/visit' do
+  "Hello World"
+end
