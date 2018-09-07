@@ -1,23 +1,36 @@
 <h2>Записаться :</h2>
+
 <p>Здесь вы можете заполнить форму, для записи к мастеру</p>
 <form action="/visit" method="post">
+		<div class="form-group row">
+		  <label class="col-sm-2 col-form-label col-form-label-sm"
+		   for="master">Выберите мастера</label>
+		  <select  name="master" class="custom-select my-1 mr-sm-2" id="master">
+		    <option selected> Мастер </option>
+		    <option value="Lenka Krivorukaya">Ленка Криворукая</option>
+		    <option value="Mariya Ivanobna">Мария Ивановна</option>
+		    <option value="Eduard Pedrilo">Эдуард Педрило</option>
+		    <option value="Slesar-Santehnik">Слесарь-сантежник</option>
+		  </select>
+		</div>
   <div class="form-group row">
-    <label for="name" name="name" class="col-sm-2 col-form-label col-form-label-sm">Ваше имя</label>
+    <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Ваше имя</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control form-control-sm" id="name" placeholder="Введите Ваше ямя здесь">
+      <input type="text"  name="name" class="form-control form-control-sm" id="name" placeholder="Введите Ваше ямя здесь">
+  	</div>
+  </div>
+  <div class="form-group row">
+    <label for="pfone"class="col-sm-2 col-form-label col-form-label-sm">Ваш  номер телефона</label>
+    <div class="col-sm-10">
+      <input type="text"  name="pfone"  class="form-control form-control-sm" id="pfone" placeholder="Введите номер телефона здесь">
     </div>
   </div>
   <div class="form-group row">
-    <label for="pfone" name="pfone" class="col-sm-2 col-form-label col-form-label-sm">Ваш  номер телефона</label>
+    <label for="data_time"class="col-sm-2 col-form-label col-form-label-sm">Дата и время</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control form-control-sm" id="pfone" placeholder="Введите номер телефона здесь">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="data_time" name="data_time" class="col-sm-2 col-form-label col-form-label-sm">Дата и время</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control form-control-sm" id="data_time" placeholder="Введите дату и время, например : 16 апреля 2018 12:20">
+      <input type="text"  name="data_time" class="form-control form-control-sm" id="data_time" placeholder="Введите дату и время, например : 16 апреля 2018 12:20">
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Записаться</button> 
 </form>
+<p><%= @message_save_visit %></p>
